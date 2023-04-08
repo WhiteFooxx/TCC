@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(16, 15, 43, 0.89);
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.content {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+.content p {
+    color: white;
+}
+
+/* Conteúdo do lado esquerdo, com o logo, as informações e controle de aeração */
+
+.content .data {
+    display: flex;
+    flex-direction: column;
+
+    gap: 100px;
+
+    width: 50%;
+
+    padding: 40px;
+}
+
+.content .data .controlInfo {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    align-items: center;
+
+    height: 70%; 
+}
+
+.header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.content .data .wrapper {
+    min-width: 260px;
+    height: 8rem;
+    background: rgb(19, 18, 45);
+    border-radius: 10px;
+    cursor: default;
+    margin-left: 110%;
+}
+
+.wrapper .display{
+    background: rgb(42, 41, 66);
+    border-radius: 6px;
+    width: 24rem;
+    height: 7rem;
+    margin-top: 2%;
+    margin-left: 3.4%;
+    text-align: center;
+    z-index: 99;
+}
+
+.wrapper .display #time{
+    line-height: 7rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: rgb(19, 18, 45);
+    letter-spacing: 1px;
+}
+
+.content .data .logo img {
+    width: 50vh;
+}
+
+.content .data .informations {
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+.content .data .informations .info {
+    width: 450px;
+    height: 170px;
+
+    border-radius: 10px;
+}
+
+.content .data .informations .info .title {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.content .data .informations .info .infoContent {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 70px;
+
+    gap: 20px;
+}
+
+.content .data .informations .info .infoContent .imgHumidity {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.content .data .informations .info .infoContent .infoValues {
+    background-color: rgba(16, 15, 43, 0.89);
+    border-radius: 10px;
+
+    width: 300px;
+    height: 120px;
+
+    text-align: center;
+}
+
+.content .data .informations .info .infoContent .infoValues p {
+    margin-top: 18px;
+}
+
+.content .data .controlAeration {
+    
+    display: flex;
+    width: max-content;
+
+    border-radius: 10px;
+
+    align-items: center;
+}
+
+.content .data .controlAeration img {
+    width: 105px;
+    height: 65px;
+}
+
+.content .data .controlInfo .controlAeration .btn-link{
+    text-decoration: none;
+    border: 1px solid rgba(18, 18, 37, 0.52);
+    width: 140px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 100px;
+    color: white;
+    background-color: rgba(18, 18, 37, 0.52);
+}
+
+.controlAeration .square{
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    margin-top: 100px;
+}
+
+.circleGreen{
+    background-color: green;
+}
+
+.circleRed{
+    background-color: red;
+}
+
+/* Conteúdo do lado direito, imagem e legenda do silo */
+
+.content .levelControl {
+    background-color: rgba(18, 18, 37, 0.52);
+
+    color: white;
+
+    display: flex;
+
+    margin-top: 15%;
+
+    width: 35vw;
+    height: 80vh;
+
+    border-radius: 20px;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.siloRed path {
+    fill: red;
+}
+
+.siloYellow path {
+    fill: yellow;
+}
+
+.siloGreen path {
+    fill: green;
+}
+
+.siloWhite path {
+    fill: white;
+}
+
+.label {
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.labelList{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label h2 {
+    font-size: 42px;
+    width: max-content;
+}
+
+.levelList {
+    display: flex;
+    gap: 20px;
+}
+
+.levelList p {
+    font-size: 35px;
+}
+
+.square {
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.white {
+    background-color:  white;
+}
+
+.grainSilo {
+    width: 120%;
+    height: 120%;
+}
+
+#silo {
+    margin-top: 15%;
+}
+
+@media (max-width: 800px) {
+    .content .data .logo img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1796px) {
+    .content {
+       flex-direction: column; 
+    }
+}
+
+@media (max-width: 1796px) {
+    .content .levelControl {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1725px) {
+    .content .data .logo{
+        width: 600px;
+    }
+}
+
+@media (max-width: 1796px) {
+    #silo{
+        margin-top: 15%;
+        margin-right: 0%;
+    }
+}
+
+@media (max-width: 1796px) {
+    .content .data .wrapper{
+        
+        margin-left: 20%;
+        margin-top: 8%;
+    }
+}
+
+@media (max-width: 1796px) {
+    .content .rightContent{
+       margin: auto; 
+    }
+}
+
